@@ -5,7 +5,11 @@ const app = express()
 const port = 8000
 const bodyParser = require('body-parser');
 
+global.__basedir = __dirname;
+
 app.use(bodyParser.json({extended: true }))
+
+app.use('/assets', express.static('./assets'));
 
 //database connection mongoose
 const connectMongooseDB = require('./src/config/mongoose');
