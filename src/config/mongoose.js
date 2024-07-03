@@ -7,10 +7,10 @@ const connectMongooseDB = async () => {
   try {
     await mongoose.connect(
         db_url,
-      {
-        useNewUrlParser: true,    
-        useUnifiedTopology: true
-      }
+      // {
+      //   useNewUrlParser: true,    
+      //   useUnifiedTopology: true
+      // }
     );
   } catch (err) {
     console.error(err.message);
